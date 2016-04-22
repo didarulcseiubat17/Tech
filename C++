@@ -1,0 +1,3 @@
+Any C++ class with at least one pure virtual function is considered to be an abstract class. This means that there can be no object created for that class (since it is abstract). abstract classes in C++ are not explicitly declared to be abstract – having a pure virtual function implicitly makes a class abstract in C++. 
+A pure virtual function is a function that has the notation "= 0" in the declaration of that function. 
+Base class constructors and derived class destructors are called first

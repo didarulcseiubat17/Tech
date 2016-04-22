@@ -1,2 +1,3 @@
 Big O analysis : it measures the efficiency of an algorithm based on the time it takes for the algorithm to run as a function of the input size. 
 The difference between Big O notation and Big Omega notation is that Big O is used to describe the worst case running time for an algorithm. But, Big Omega notation, on the other hand, is used to describe the best case running time for a given algorithm.
+A queue is best represented with FIFO. A stack on the other hand is best represented as FILO.

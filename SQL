@@ -3,3 +3,36 @@ The data in RDBMS is stored in database objects called tables.
 A table is a collection of related data entries and it consists of columns and rows.
 
 Tables contain records (rows) with data.
+SQL is NOT case sensitive: select is the same as SELECT
+Some database systems require a semicolon at the end of each SQL statement.
+Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.
+
+The SELECT statement is used to select data from a database. The result is stored in a result table, called the result-set.
+SELECT CustomerName,City FROM Customers;
+The DISTINCT keyword can be used to return only distinct (different) values.
+The WHERE clause is used to extract only those records that fulfill a specified criterion.
+SQL requires single quotes around text values (most database systems will also allow double quotes). However, numeric fields should not be enclosed in quotes
+The AND operator displays a record if both the first condition AND the second condition are true.
+The OR operator displays a record if either the first condition OR the second condition is true.
+
+SELECT * FROM Customers
+WHERE Country='Germany'
+AND City='Berlin';
+
+The ORDER BY keyword sorts the records in ascending order by default. To sort the records in a descending order, you can use the DESC keyword.
+The INSERT INTO statement is used to insert new records in a table
+The UPDATE statement is used to update records in a table.
+The DELETE statement is used to delete rows in a table.
+
+SQL Injection Based on ""="" is Always True  -----SQL injection is a technique where malicious users can inject SQL commands into an SQL statement, via web page input.
+
+txtUserId = getRequestString("UserId");
+txtSQL = "SELECT * FROM Users WHERE UserId = @0";
+db.Execute(txtSQL,txtUserId);
+
+Note that parameters are represented in the SQL statement by a @ marker.
+The SQL engine checks each parameter to ensure that it is correct for its column and are treated literally, and not as part of the SQL to be executed.
+
+
+
+

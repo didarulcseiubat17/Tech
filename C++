@@ -59,7 +59,43 @@ For small, commonly-used functions, the time needed to make the function call is
 In fact, all the functions defined inside the class are implicitly inline. If you need to explicitly declare inline function in the class then just declare the function inside the class and define it outside the class using inline keyword.
 
 OOP=================
-Object: Objects are basic run-time entities in an object oriented system, objects are instances of a class these are defined user defined data types.
+Object: Objects are basic run-time entities in an object oriented system, objects are instances of a class these are defined user defined data types. Object take up space in memory and have an associated address。
+Class: Class is a blueprint of data and functions or methods. Class does not take any space.
+Encapsulation: Wrapping up(combing) of data and functions into a single unit is known as encapsulation. The data is not accessible to the outside world and only those functions which are wrapping in the class can access it. This insulation of the data from direct access by the program is called data hiding or information hiding.
+Data abstraction refers to, providing only needed information to the outside world and hiding implementation details. 
+Inheritance: inheritance is the process by which objects of one class acquire the properties of objects of another class.
+Polymorphism: polymorphism means ability to take more than one form. An operation may exhibit different behaviors in different instances. The behavior depends upon the types of data used in the operation.
+C++ supports operator overloading and function overloading.
+Operator overloading is the process of making an operator to exhibit different behaviors in different instances is known as operator overloading.
+Function overloading is using a single function name to perform different types of tasks.
+Dynamic Binding: In dynamic binding, the code to be executed in response to function call is decided at runtime. C++ has virtual functions to support this.
+Message Passing: Objects communicate with one another by sending and receiving information to each other. 
+
+A class declaration can contain static object of self type, it can also have pointer to self type, but it cannot have a non-static object of self type.
+class Test {
+  static Test self;  // works fine
+};//Static variables do not contribute to the size of objects. So no problem in calculating size with static variables of self type.
+For a com'piler, all pointers have a fixed size irrespective of the data type they are pointing to, so no problem with this also.
+Size of an empty class is not zero. It is 1 byte generally. It is nonzero to ensure that the two different objects will have different addresses.
+
+static member functions in C++////////
+1) static member functions do not have this pointer.
+2) A static member function cannot be virtual
+3) Member function declarations with the same name and the name parameter-type-list cannot be overloaded if any of them is a static member function declaration.
+4) A static member function can not be declared const, volatile, or const volatile.
+
+The keyword static can be used in three major contexts: inside a function, inside a class definition, and in front of a global variable inside a file making up a multifile program.
+1.1 The use of static inside a function is the simplest. It simply means that once the variable has been initialized, it remains in memory until the end of the program. You can think of it as saying that the variable sticks around, maintaining its value, until the program completely ends. 
+1.2 You can also use static in this fashion to prevent a variable from being reinitialized inside a loop. The trick is that the keyword static prevents re-initialization of the variable. One feature of using a static keyword is that it happens to be initialized to zero automatically for you -- but don't rely on this behavior
+1.3 You might use a static variable in order to preserve information about the last value a function returned, 
+2.1 The second use of static is inside a class definition. While most variables declared inside a class occur on an instance-by-instance basis, a static member variable has the same value in any instance of the class and doesn't even require an instance of the class to exist. Importantly, it is good syntax to refer to static member functions through the use of a class name (class_name::x; rather than instance_of_class.x;). Doing so helps to remind the programmer that static member variables do not belong to a single instance of the class and that you don't need to have a single instance of a class to use a static member variable. As you have probably noticed, to access the static member, you use the scope operator, ::, when you refer to it through the name of the class.
+   you cannot initialize the static class member inside of the class.
+2.2 Static member functions are functions that do not require an instance of the class, static member functions can only operate on static members, Static member functions can be used to modify static member variables to keep track of their values
+Notice that you must include the type of the static variable when you set it!
+3. The last use of static is as a global variable inside a file of code. It's scope -- or visibility -- is limited to the file.
+
+
+
 
 
 

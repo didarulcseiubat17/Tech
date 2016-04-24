@@ -5,6 +5,10 @@ References in C++/////////////
 When a variable is declared as reference, it becomes an alternative name for an existing variable. A variable can be declared as reference by putting ‘&’ in the declaration.(ampersand)
 int& ref = x;
 
+difference between value types and reference types://///////
+A value type is held on the stack and a copy of it is passed to called methods
+A reference value is held in the managed heap and the stack holds only a pointer (reference) to its location. The location, and not the object, is passed to called methods
+
 References vs Pointers//////////
 Both references and pointers can be used to change local variables of one function inside another function. Both of them can also be used to save copying of big objects when passed as arguments to functions or returned from functions, to get efficiency gain.
 References are less powerful than pointers
@@ -93,6 +97,75 @@ The keyword static can be used in three major contexts: inside a function, insid
 2.2 Static member functions are functions that do not require an instance of the class, static member functions can only operate on static members, Static member functions can be used to modify static member variables to keep track of their values
 Notice that you must include the type of the static variable when you set it!
 3. The last use of static is as a global variable inside a file of code. It's scope -- or visibility -- is limited to the file.
+
+‘this’ pointer in C++////////////////////
+‘this’ pointer is a constant pointer that holds the memory address of the current object. The ‘this’ pointer is passed as a hidden argument to all nonstatic member function calls and is available as a local variable within the body of all nonstatic functions. ‘this’ pointer is not available in static member functions as static member functions can be called without any object (with class name).
+1) When local variable’s name is same as member’s name
+2) To return reference to the calling object
+/* Reference to the calling object can be returned */
+Test& Test::func ()
+{
+   // Some processing
+   return *this;
+} 
+When a reference to a local object is returned, the returned reference can be used to "chain function calls" on a single object.//obj1.setX(10).setY(20);
+The type of this depends upon function declaration. 
+
+Constructor and Destructor:////////////////
+A constructor is a member function of a class which initializes objects of a class. 
+How constructors are different from a normal member function?
+In fact except inline, no other keyword is allowed in the declaration of constructor.
+A constructor is different from normal functions in following ways:
+(i) Constructor has same name as the class itself
+(ii) Constructors don’t have return type
+(iii) A constructor is automatically called when an object is created.
+(iv) If we do not specify a constructor, C++ compiler generates a default constructor for us (expects no parameters and has an empty body).
+
+A copy constructor is a member function which initializes an object using another object of the same class. A copy constructor has the following general function prototype:
+	ClassName (const ClassName &old_obj); 
+If we don’t define our own copy constructor, the C++ compiler creates a default copy constructor for each class which does a member wise copy between objects. The compiler created copy constructor works fine in general. We need to define our own copy constructor only if an object has pointers or any run time allocation of resource like file handle, a network connection..etc.
+Compiler doesn’t create a default constructor if we write any constructor even if it is copy constructor.  Compiler creates a copy constructor if we don’t write our own. Compiler creates it even if we have written other constructors in class. 
+compiler created temporary objects cannot be bound to non-const references
+
+Destructor is a member function which destructs or deletes an object. there can only one destructor in a class
+Destructors have same name as the class preceded by a tilde (~)
+Destructors don’t take any argument and don’t return anything
+
+In C++, class variables are initialized in the same order as they appear in the class declaration.
+
+When do we use Initializer List in C++?
+Initializer List is used to initialize data members of a class. The list of members to be initialized is indicated with constructor as a comma separated list followed by a colon.
+1) For initialization of non-static const data members:
+2) For initialization of reference members:
+3) For initialization of member objects which do not have default constructor:
+4) For initialization of base class members : 
+5) When constructor’s parameter name is same as data member
+6) For Performance reasons:
+
+when a class has private destructur, only dynamic objects of that class can be created. Following is a way to create classes with private destructors and have a function as friend of the class. The function can only delete the objects.
+
+Inheritance:////////////
+
+Following are the things which a derived class doesn’t inherits from its parent :
+1) The base class’s constructors and destructor.
+2) The base class’s friends
+
+Virtual functions allow us to create a list of base class pointers and call methods of any of the derived classes without even knowing kind of derived class object.
+
+The constructors of inherited classes are called in the same order in which they are inherited. 
+
+ When we use ‘virtual’ keyword, the default constructor of grandparent class is called by default even if the parent classes explicitly call parameterized constructor.
+ 
+Object slicing happens when a derived class object is assigned to a base class object, additional attributes of a derived class object are sliced off to form the base class object.
+ Object slicing doesn’t occur when pointers or references to objects are passed as function arguments since a pointer or reference of any type takes same amount of memory. 
+ Object slicing can be prevented by making the base class function pure virtual there by disallowing object creation. It is not possible to create the object of a class which contains a pure virtual method.
+ 
+ In C++, if a derived class redefines base class member method then all the base class methods with same name become hidden in derived class,even if the signature of the derived class method is different.
+ 
+
+
+
+
 
 
 

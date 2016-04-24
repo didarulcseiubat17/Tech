@@ -59,7 +59,7 @@ For small, commonly-used functions, the time needed to make the function call is
 In fact, all the functions defined inside the class are implicitly inline. If you need to explicitly declare inline function in the class then just declare the function inside the class and define it outside the class using inline keyword.
 
 OOP=================
-
+Object: Objects are basic run-time entities in an object oriented system, objects are instances of a class these are defined user defined data types.
 
 
 

@@ -1,3 +1,73 @@
+GG-------------
+
+References in C++/////////////
+When a variable is declared as reference, it becomes an alternative name for an existing variable. A variable can be declared as reference by putting ‘&’ in the declaration.(ampersand)
+int& ref = x;
+
+References vs Pointers//////////
+Both references and pointers can be used to change local variables of one function inside another function. Both of them can also be used to save copying of big objects when passed as arguments to functions or returned from functions, to get efficiency gain.
+References are less powerful than pointers
+1) Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+2) References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
+3) A reference must be initialized when declared. There is no such restriction with pointers
+References are safer and easier to use:
+1) Safer: Since references must be initialized, wild references like wild pointers are unlikely to exist. It is still possible to have references that don’t refer to a valid location 
+2) Easier to use: References don’t need dereferencing operator to access the value. They can be used like normal variables. ‘&’ operator is needed only at the time of declaration. Also, members of an object reference can be accessed with dot operator (‘.’), unlike pointers where arrow operator (->) is needed to access members.
+**Together with the above reasons, there are few places like copy constructor argument where pointer cannot be used. Reference must be used pass the argument in copy constructor. Similarly references must be used for overloading some operators like ++.
+In C++, Reference variables are safer than pointers because reference variables must be initialized and they cannot be changed to refer to something else once they are initialized. But there are exceptions where we can have invalid references.
+1) Reference to value at uninitialized pointer.
+int *ptr;
+int &ref = *ptr;  // Reference to value at some random memory location
+2) Reference to a local variable is returned.
+int& fun()
+{
+   int a = 10;
+   return a;
+}
+Once fun() returns, the space allocated to it on stack frame will be taken back. So the reference to a local variable will not be valid.
+
+Pass arguments by reference or pointer://///////////
+1) To modify local variables of the caller function: A reference (or pointer) allows called function to modify a local variable of the caller function. 
+2) For passing large sized arguments: If an argument is large, passing by reference (or pointer) is more efficient because only an address is really passed, not the entire object. 
+3) To avoid Object Slicing: If we pass an object of subclass to a function that expects an object of superclass then the passed object is sliced if it is pass by value. 
+4) To achieve Run Time Polymorphism in a function 
+We can make a function polymorphic by passing objects as reference (or pointer) to it.
+
+Function Overloading in C++///////////////
+Function overloading is a feature in C++ where two or more functions can have the same name but different parameters.
+Function overloading can be considered as an example of polymorphism feature in C++.
+
+Functions that cannot be overloaded in C++(error)///////
+1) Function declarations that differ only in the return type. 
+2) Member function declarations with the same name and the name parameter-type-list cannot be overloaded if any of them is a static member function declaration. 
+3) Parameter declarations that differ only in a pointer * versus an array [] are equivalent. 
+4) Parameter decla'rations that differ only in that one is a function type and the other is a pointer to the same function type are equivalent.
+5) Parameter declarations that differ only in the presence or absence of const and/or volatile are equivalent. That is, the const and volatile type-specifiers for each parameter type are ignored when determining which function is being declared, defined, or called. 
+6) Two parameter declarations that differ only in their default arguments are equivalent. 
+
+Function overloading and const keyword
+C++ allows member methods to be overloaded on the basis of const type. Overloading on the basis of const type can be useful when a function return reference or pointer. We can make one function const, that returns a const reference or const pointer, other non-const function, that returns non-const reference or pointer.
+C++ allows functions to be overloaded on the basis of const-ness of parameters only if the const parameter is a reference or a pointer. 
+
+Overloading doesn’t work for derived class in C++ programming language. There is no overload resolution between Base and Derived. 
+
+To overload main() function in C++, it is necessary to use class and declare the main as member function. Note that main is not reserved word in programming languages like C, C++, Java and C#. 
+
+Inline Functions in C++////////////////
+For small, commonly-used functions, the time needed to make the function call is often a lot more than the time needed to actually execute the function’s code. 
+In fact, all the functions defined inside the class are implicitly inline. If you need to explicitly declare inline function in the class then just declare the function inside the class and define it outside the class using inline keyword.
+
+OOP=================
+
+
+
+
+
+
+
+
+
+PQ---------
 Any C++ class with at least one pure virtual function is considered to be an abstract class. This means that there can be no object created for that class (since it is abstract). abstract classes in C++ are not explicitly declared to be abstract – having a pure virtual function implicitly makes a class abstract in C++. 
 A pure virtual function is a function that has the notation "= 0" in the declaration of that function. 
 Base class constructors and derived class destructors are called first

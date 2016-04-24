@@ -1,2 +1,2 @@
 # Tech
-Multi-tech skills picking up general
+Multi-tech skills reminder general

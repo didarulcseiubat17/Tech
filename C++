@@ -161,9 +161,29 @@ Object slicing happens when a derived class object is assigned to a base class o
  Object slicing can be prevented by making the base class function pure virtual there by disallowing object creation. It is not possible to create the object of a class which contains a pure virtual method.
  
  In C++, if a derived class redefines base class member method then all the base class methods with same name become hidden in derived class,even if the signature of the derived class method is different.
+
+Friend://///////////
+
+ Following are some important points about friend functions and classes:
+1) Friends should be used only for limited purpose. too many functions or external classes are declared as friends of a class with protected or private data, it lessens the value of encapsulation of separate classes in object-oriented programming.
+2) Friendship is not mutual. If a class A is friend of B, then B doesn’t become friend of A automatically.
+3) Friendship is not inherited (See this for more details)
+4) The concept of friends is not there in Java.
  
 
 
+
+Standard Template Library (STL):-----------------
+The pair container is a simple container consisting of two data elements or objects. The first element is referenced as ‘first’ and the second element as ‘second’ and the order is fixed (first, second). The array of objects allocated in a map or hash_map are of type ‘pair’ by default in which all the ‘first’ elements are unique keys associated with their ‘second’ value objects.
+Vectors are same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted, with their storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. 
+Lists are sequence containers that allow non-contiguous memory allocation. As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick. Normally, when we say a List, we talk about doubly linked list.
+Dequeue: Double ended queues are sequence containers with the feature of expansion and contraction on both the ends. They are similar to vectors, but are more efficient in case of insertion and deletion of elements at the end, and also the beginning. Unlike vectors, contiguous storage allocation may not be guaranteed.
+Queues are a type of container adaptors which operate in a first in first out (FIFO) type of arrangement. Elements are inserted at the back (end) and are deleted from the front.
+Priority queues are a type of container adaptors, specifically designed such that the first element of the queue is the greatest of all elements in the queue.
+Stacks are a type of container adaptors with LIFO(Last In First Out) type of working, where a new element is added at one end and (top) an element is removed from that end only.
+Multisets are a type of associative containers similar to set, with an exception that multiple elements can have same values.
+Maps are associative containers that store elements in a mapped fashion. Each element has a key value and a mapped value. No two mapped values can have same key values.
+Multimap is similar to mapwith an addition that multiple elements can have same keys. Rather than each element being unique, the key value and mapped value pair has to be unique in this case.
 
 
 

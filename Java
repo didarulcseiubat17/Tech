@@ -32,5 +32,118 @@ For Each Loops: a concise version of a for loop
 ArrayList: stores a list of data
 HashMap: stores keys and associated values like a dictionary
 
+GG-------------------
+
+Variables:///////
+In Java, all objects are dynamically allocated on Heap. To allocate memory to an object, we must use new(). 
+
+final variables in Java////////
+In Java, when final keyword is used with a variable of primitive data types (int, float, .. etc), value of the variable cannot be changed.
+When final is used with non-primitive variables (Note that non-primitive variables are always references to objects in Java), the members of the referred object can be changed. final for non-primitive variables just mean that they cannot be changed to refer to any other object
+
+Unlike C++, we don’t need forward declarations in Java. Identifiers (class and method names) are recognized automatically from source files. Similarly, library methods are directly read from the libraries, and there is no need to create header files with declarations.
+Widening Primitive Conversion 
+
+String////////////////
+import java.io.*;
+import java.util.*;
+class Test
+{
+    public static void main (String[] args)
+    {
+        String s= "GeeksforGeeks";
+        // or String s= new String ("GeeksforGeeks");
+ 
+        // Returns the number of characters in the String.
+        System.out.println("String length = " + s.length());
+ 
+        // Returns the character at ith index.
+        System.out.println("Character at 3rd position = "
+                           + s.charAt(3));
+ 
+        // Return the substring from the ith  index character
+        // to end of string
+        System.out.println("Substring " + s.substring(3));
+ 
+        // Returns the substring from i to j-1 index.
+        System.out.println("Substring  = " + s.substring(2,5));
+ 
+        // Concatenates string2 to the end of string1.
+        String s1 = "Geeks";
+        String s2 = "forGeeks";
+        System.out.println("Concatenated string  = " +
+                            s1.concat(s2));
+ 
+        // Returns the index within the string
+        // of the first occurrence of the specified string.
+        String s4 = "Learn Share Learn";
+        System.out.println("Index of Share " + 
+                           s4.indexOf("Share"));
+ 
+        // Returns the index within the string of the
+        // first occurrence of the specified string,
+        // starting at the specified index.
+        System.out.println("Index of a  = " + 
+                           s4.indexOf('a',3));
+ 
+        // Checking equality of Strings
+        Boolean out = "Geeks".equals("geeks");
+        System.out.println("Checking Equality  " + out);
+        out = "Geeks".equals("Geeks");
+        System.out.println("Checking Equality  " + out);
+ 
+        out = "Geeks".equalsIgnoreCase("gEeks ");
+        System.out.println("Checking Equality" + out);
+ 
+        int out1 = s1.compareTo(s2);
+        System.out.println("If s1 = s2" + out);
+ 
+        // Converting cases
+        String word1 = "GeeKyMe";
+        System.out.println("Changing to lower Case " +
+                            word1.toLowerCase());
+ 
+        // Converting cases
+        String word2 = "GeekyME";
+        System.out.println("Changing to UPPER Case " + 
+                            word1.toUpperCase());
+ 
+        // Trimming the word
+        String word4 = " Learn Share Learn ";
+        System.out.println("Trim the word " + word4.trim());
+ 
+        // Replacing characters
+        String str1 = "feeksforfeeks";
+        System.out.println("Original String " + str1);
+        String str2 = "feeksforfeeks".replace('f' ,'g') ;
+        System.out.println("Replaced f with g -> " + str2);
+    } 
+}
+
+Scanner://////
+import java.util.Scanner;
+// Declare the object and initialize with
+        // predefined standard input object
+        Scanner sc = new Scanner(System.in);
+ 
+        // String input
+        String name = sc.nextLine();
+ 
+        // Character input
+        char gender = sc.next().charAt(0);
+ 
+        // Numerical data input
+        // byte, short and float can be read
+        // using similar-named functions.
+        int age = sc.nextInt();
+        long mobileNo = sc.nextLong();
+        double cgpa = sc.nextDouble();
+
+Addition and Concatenation: compiler evaluates the given expression from left to right given that the operators have same precedence. Once it encounters the String, it considers the rest of the expression as of a String (again based on the precedence order of the expression).
+
+
+
+
+
 
 

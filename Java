@@ -141,6 +141,35 @@ import java.util.Scanner;
 
 Addition and Concatenation: compiler evaluates the given expression from left to right given that the operators have same precedence. Once it encounters the String, it considers the rest of the expression as of a String (again based on the precedence order of the expression).
 
+for(int i=0; i < arr.length; i++)
+Arrays.equals(arr1, arr2)
+Arrays.deepEquals(arr1, arr2)
+
+Static Data Members: Like C++, static data members in Java are class members and shared among all objects. 
+Static Member Methods: Like C++, methods declared as static are class members and have following restrictions:
+1) They can only call other static methods. 
+2) They must only access static data.
+3) They cannot access this or super . 
+Static Block: Unlike C++, Java supports a special block, called static block (also called static clause) which can be used for static initialization of a class.
+Static Local Variables: Unlike C++, Java doesn’t support static local variables. 
+Only nested classes can be static.
+1) Nested static class doesn’t need reference of Outer class, but Non-static nested class or Inner class requires Outer class reference.
+2) Inner class(or non-static nested class) can access both static and non-static members of Outer class. A static class cannot access non-static members of the Outer class. It can access only static members of Outer class.
+3) An instance of Inner class cannot be created without an instance of outer class and an Inner class can reference data and methods defined in Outer class in which it nests, so we don’t need to pass reference of an object to the constructor of the Inner class. For this reason Inner classes can make program simple and concise.
+
+Overriding : Overriding is a feature of OOP languages like Java that is related to run-time polymorphism. A subclass (or derived class) provides a specific implementation of a method in superclass (or base class). The implementation to be executed is decided at run-time and decision is made according to the object used for call. Note that signatures of both methods must be same.
+
+Overloading: Overloading is also a feature of OOP languages like Java that is related to compile time (or static) polymorphism. This feature allows different methods to have same name, but different signatures, especially number of input parameters and type of input paramaters. Note that in both C++ and Java, methods cannot be overloaded according to return type.
+An instance method cannot override a static method, and a static method cannot hide an instance method. 
+
+const variables in C++ must be assigned a value when declared. For final variables n Java, it is not necessary. A final variable can be assigned value later, but only once. 
+
+The super keyword in java is a reference variable that is used to refer parent class objects.  The keyword “super” came into the picture with the concept of Inheritance. 
+1. Use of super with variables: This scenario occurs when a derived class and base class has same data members. 
+2. Use of super with methods: This is used when we want to call parent class method. So whenever a parent and child class have same named methods then to resolve ambiguity we use super keyword. 
+3. Use of super with constructors: super keyword can also be used to access the parent class constructor. One more important thing is that, ‘’super’ can call both parametric as well as non parametric constructors depending upon the situation. Call to super() must be first statement in Derived(Student) Class constructor.
+
+private methods are inaccessible, they are implicitly final in Java. So adding final specifier to a private method doesn’t add any value.
 
 
 

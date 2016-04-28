@@ -34,5 +34,74 @@ Note that parameters are represented in the SQL statement by a @ marker.
 The SQL engine checks each parameter to ensure that it is correct for its column and are treated literally, and not as part of the SQL to be executed.
 
 
+The SELECT TOP clause is used to specify the number of records to return.
+
+The LIKE operator is used to search for a specified pattern in a column. WHERE City LIKE '%s';
+
+Wildcard	Description
+%	A substitute for zero or more characters
+_	A substitute for a single character
+[charlist]	Sets and ranges of characters to match
+[^charlist]
+or
+[!charlist]	Matches only a character NOT specified within the brackets
+
+The IN operator allows you to specify multiple values in a WHERE clause.
+
+The BETWEEN operator selects values within a range. The values can be numbers, text, or dates.
+
+SQL aliases are used to give a database table, or a column in a table, a temporary name. Basically aliases are created to make column names more readable.
+
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables. INNER JOIN is the same as JOIN.
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
+FULL JOIN: Return all rows when there is a match in ONE of the tables
+
+The UNION operator is used to combine the result-set of two or more SELECT statements
+
+The SELECT INTO statement copies data from one table and inserts it into a new table.
+
+The INSERT INTO SELECT statement selects data from one table and inserts it into an existing table. Any existing rows in the target table are unaffected.
+
+The CREATE DATABASE statement is used to create a database.
+
+NOT NULL - Indicates that a column cannot store NULL value
+UNIQUE - Ensures that each row for a column must have a unique value
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Ensures that a column (or combination of two or more columns) have a unique identity which helps to find a particular record in a table more easily and quickly
+FOREIGN KEY - Ensure the referential integrity of the data in one table to match values in another table
+CHECK - Ensures that the value in a column meets a specific condition
+DEFAULT - Specifies a default value for a column
+
+ADD CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)
+The PRIMARY KEY constraint uniquely identifies each record in a database table. Primary keys must contain UNIQUE values. A primary key column cannot contain NULL values. Most tables should have a primary key, and each table can have only ONE primary key.
+A FOREIGN KEY in one table points to a PRIMARY KEY in another table. The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+
+The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the table it points to.
+
+The users cannot see the indexes, they are just used to speed up searches/queries.
+
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+It is not possible to compare NULL and 0; they are not equivalent.
+
+AVG() - Returns the average value
+COUNT() - Returns the number of rows
+FIRST() - Returns the first value
+LAST() - Returns the last value
+MAX() - Returns the largest value
+MIN() - Returns the smallest value
+SUM() - Returns the sum
+
+UCASE() - Converts a field to upper case
+LCASE() - Converts a field to lower case
+MID() - Extract characters from a text field
+LEN() - Returns the length of a text field
+ROUND() - Rounds a numeric field to the number of decimals specified
+NOW() - Returns the current system date and time
+FORMAT() - Formats how a field is to be displayed
+
+
+
+
 
 

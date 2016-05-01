@@ -1,1 +1,51 @@
+The advantage of using the command line is its power. You can run programs, write scripts to automate common tasks, and combine simple commands to handle difficult tasks - making it an important programming tool.
+
+The command line is a text interface for the computer's operating system. To access the command line, we use the terminal.
+A filesystem organizes a computer's files and directories into a tree structure. It starts with the root directory. Each parent directory can contain more child directories and files.
+From the command line, you can navigate through files and folders on your computer:
+pwd outputs the name of the current working directory.
+ls lists all files and directories in the working directory.
+cd switches you into the directory you specify.
+mkdir creates a new directory in the working directory.
+touch creates a new file inside the working directory.
+
+Options modify the behavior of commands:
+ls -a lists all contents of a directory, including hidden files and directories
+ls -l lists all contents in long format
+ls -t orders files and directories by the time they were last modified
+Multiple options can be used together, like ls -alt
+From the command line, you can also copy, move, and remove files and directories:
+cp copies files
+mv moves and renames files
+rm removes files
+rm -r removes directories
+Wildcards are useful for selecting groups of files and directories
+
+$  This is called a shell prompt. It appears when the terminal is ready to accept a command.
+ls  When you type ls, the command line looks at the folder you are in, and then "lists" the files and folders inside it.
+pwd  stands for "print working directory". It outputs the name of the directory you are currently in, called the working directory.
+cd  stands for "change directory". cd switches you into the directory you specify. To move up one directory, use cd ..
+mkdir The mkdir command stands for "make directory". It takes in a directory name as an argument, and then creates a new directory in the current working directory.
+touch command creates a new file inside the working directory. It takes in a filename as an argument, and then creates an empty file in the current working directory.
+
+Options modify the behavior of commands.
+-a - lists all contents, including hidden files and directories
+-l - lists all contents of a directory in long format
+-t - order files and directories by the time they were last modified.
+In addition to using each option separately, like ls -a or ls -l, multiple options can be used together, like ls -alt.
+
+The cp command copies files or directories. 
+wildcards. The * selects all files in the working directory,
+To rename a file, use mv with the old file as the first argument and the new file as the second argument. 
+The rm command deletes files and directories.
+The -r stands for "recursive," and it's used to delete a directory and all of its child directories.
+
+
+
+
+
+
+
+
+
 

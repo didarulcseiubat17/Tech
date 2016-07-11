@@ -1,4 +1,0 @@
-1. “Server Tomcat v7.0 Server at localhost failed to start”->	
-This is one of the common problem a developer face, from my experience I can advice that most of the time error is because of the web.xml file . Try to remove few newly created servlet and servlet-mapping tags .
-
-2.Why won't my web browser reflect changes I made on the server?->refresh

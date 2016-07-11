@@ -1,1 +1,17 @@
 both CVS and SVN are known as centralised version control systems (CVCS). That is, there is one Master repository where people share code; everyone checks out their code (or branch) from that repository, and checks changes back in. For code that needs to be sent person-to-person (for example, for review, or as a way of contributing fixes), it is possible to create a patch, which is a diff of your code against the given Master repository version (often HEAD, but sometimes a branch like Eclipse_35).
+------>1. You need to be 'online' to perform actions, like diff or patch [1].
+2. Patches generated against a particular branch can become outdated fairly quickly
+
+Distributed Version Control Systems (DVCS),Two of the most popular are Git and Hg
+In a DVCS each user has a complete copy of the repository, including its entire history. 
+
+ In a DVCS each user has a complete copy of the repository, including its entire history. A user may potentially push changes to or pull changes from any other repository. Although policy may confer special status on one or more repositories, in principle every repository is a first-class citizen in the DVCS model. This stands in contrast to a centralised version control system, where every individual checks files into and out of an authoritative repository.
+ 
+ Each user has a full copy of the repository
+ 
+ 
+ 
+ 
+
+
+

@@ -1,0 +1,19 @@
+01. git init (in a dir)
+02. git status : current status of project
+03. git add xxx.xx : add to staging area(start tracking)
+04. git commit -m "comment" : or''
+05. git add '*.xx' : wildcard
+06. git log
+07. git remote add origin(remote_name) url
+08. git push -u remote_name local_name: default local name- master, -u to remember parameters
+09. git pull
+10. git diff HEAD: HEAD - most recent commit
+11. git diff --staged: the changes you staged
+12. git reset xxx.xx: unstage files
+13. git checkout -- xx.xx: back to its last commit
+14. git branch branch_name
+15. git checkout branch_name: switch to 
+16. git rm xx : remove and stage
+17. git merge branch_tojoin: 
+18. git branch -d branch_name: delete branch
+19. 

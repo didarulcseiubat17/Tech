@@ -16,4 +16,10 @@
 16. git rm xx : remove and stage
 17. git merge branch_tojoin: 
 18. git branch -d branch_name: delete branch
-19. 
+
+19. HEAD - refer to last commit
+20. -a : add changes from all tracked files
+21. git reset -- soft(undo commit, put changes into staging) HEAD^(move to commit before HEAD)
+    git reset -- hard(undo commit and all changes) HEAD^^(last 2)
+22. git commit --amend(add to the last commit) -m "message"(override)
+23. git remote -v (show remote repositories)

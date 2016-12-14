@@ -23,3 +23,12 @@
     git reset -- hard(undo commit and all changes) HEAD^^(last 2)
 22. git commit --amend(add to the last commit) -m "message"(override)
 23. git remote -v (show remote repositories)
+24. git diff --staged (staged different)
+25. git commit -a(all) (stage and commit)
+26. git commit --amend (amend last commit)
+27. git checkout -- xx.xx (undo changes done)
+28. git clone url
+29. git remote --verbose (list all repo url)
+30. git checkout branch_n1 (switch to branch_n1)
+31. git merge branch_n1 (merge branch_n1 to current branch)
+32. git checkout -b branch_n1 (create the branch and switch to it)

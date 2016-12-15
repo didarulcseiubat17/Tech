@@ -32,3 +32,8 @@
 30. git checkout branch_n1 (switch to branch_n1)
 31. git merge branch_n1 (merge branch_n1 to current branch)
 32. git checkout -b branch_n1 (create the branch and switch to it)
+33. git pull = git fetch + git merge
+34. git branch -r (show remote branches)
+35. git tag (show tag(version))
+36. git push --tag
+37. git checkout tag_name (rollback)
